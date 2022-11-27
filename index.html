@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./pages/index.css">
+  <script src="./scripts/initialArray.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesto Russia</title>
+</head>
+<body class="body">
+  <div class="page">
+    <header class="header setwidth">
+      <img class="header__logo" src="./images/LogoW.svg" alt="лого">
+    </header>
+    <main class="content setwidth">
+      <section class=profile>
+        <div class="profile__avatar">
+          <img class="avatar-pic" src="images/Kusto.jpg" alt="фото">
+        </div>
+        <div class="profile__personal">
+          <div class="profile__nameline">
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+            <button type="button" class="profile__edit-button"> 
+              <img src="./images/Vector.svg" alt="иконка">
+            </button>
+          </div>
+          <p class="profile__career">Исследователь океана</p>
+        </div>
+        <button type="button" class="profile__add-button">
+          <img src="./images/Plus.svg" alt="иконка">
+        </button>
+      </section>
+      <section class="elements">
+        <ul class="elements__places"></ul>
+      </section>
+    </main>
+    <footer class="footer setwidth">
+      <p class="footer__copyright">© 2020 Mesto Russia</p>        
+    </footer>
+    <template id="card-template">
+      <li class="place">
+        <button type="button" class="place__delete-button"></button>
+          <img class="place__foto" src="#" alt="Фото">
+          <div class="place__descript">
+              <h2 class="place__placename"></h2>
+              <button type="button" class="place__like"></button>
+          </div> 
+      </li>
+    </template> 
+    <div class="popup-profile">      
+      <form class="input-form" name="form">
+        <h3 class="input-form__header">Редактировать профиль</h3>
+        <input type="text" name="input" class="input-form__field input-form__field_info_name">
+        <input type="text" name="input" class="input-form__field input-form__field_info_career">
+        <button type="submit" class="input-form__submitbutton">Сохранить</button>
+      </form>
+      <button type="button" class=popup-profile__close-button></button>
+    </div>
+    <div class="popup-card">      
+      <form class="input-card" name="card">
+        <h3 class="input-card__header">Новое место</h3>
+        <input type="text" name="input" class="input-card__field input-card__field_info_place" placeholder="Название">
+        <input type="url" name="input" class="input-card__field input-card__field_info_source" placeholder="Ссылка на картинку">
+        <button type="submit" class="input-card__submitbutton">Создать</button>
+      </form>
+      <button type="button" class=popup-card__close-button></button>     
+    </div>
+    <div class="popup-fullscreen">
+      <div class="popup-fullscreen__frame">
+        <button  type="button" class="popup-fullscreen__close-button"></button>
+        <div class="popup-fullscreen__foto">
+          <img class="popup-fullscreen__img" src="#" alt="Фото">
+        </div>
+        <h3 class="popup-fullscreen__title"></h3>
+      </div>
+    </div>
+  </div>
+  <script src="./scripts/index.js" defer></script>
+</body>
+</html>
