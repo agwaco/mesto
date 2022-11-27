@@ -1,0 +1,22 @@
+.popup-fullscreen {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    min-height:100%;
+    background-color: rgba(0,0,0,0.9);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.7s;
+  }
+
+  .popup-fullscreen.popup_active {
+  visibility: visible;
+  opacity: 1;
+}
